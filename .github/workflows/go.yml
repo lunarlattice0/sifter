@@ -23,3 +23,10 @@ jobs:
 
     - name: Build
       run: GOOS=windows GOARCH=386 go build -v ./...
+      
+    - name: Upload Go build results
+      uses: actions/upload-artifact@v3
+      with:
+        name: sifter.exe
+        path: build/sifter_latest.exe
+          
