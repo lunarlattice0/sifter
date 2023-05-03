@@ -27,6 +27,6 @@ jobs:
     - name: Upload Go build results
       uses: actions/upload-artifact@v3
       with:
-        name: sifter.exe
-        path: build/sifter_latest.exe
+        name: sifter
+        path: sifter.exe
           
