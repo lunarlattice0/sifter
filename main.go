@@ -122,8 +122,8 @@ func main() {
 	}
 	defer json.Close()
 	
-	// Simple check if target dir exists
-	_, err = os.Stat(os.Args[2])
+	// MKDIR if not existing 
+	err = os.MkdirAll(os.Args[2], os.ModePerm)
 	if err != nil {
 		log.Fatal(err)
 	}
